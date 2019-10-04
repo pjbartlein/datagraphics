@@ -1,0 +1,926 @@
+<html>
+
+
+<!-- Mirrored from geog.uoregon.edu/datagraphics/patterns/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2018 06:05:15 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Data Graphics Research</title>
+</head>
+
+<body>
+
+<div align="left">
+  <table border="0" cellpadding="0" cellspacing="0" width="780">
+    <center>
+    <tr>
+      <td valign="top" width="780" colspan="3">
+      <!--webbot bot="Include"
+        U-Include="../_private/header_include.htm" TAG="BODY" startspan -->
+  <table border="0" cellpadding="0" cellspacing="0" width="780">
+    <tr>
+      <td valign="top" width="153"></td>
+      <td width="15"></td>
+      <td valign="top" width="612">
+		<img border="0" align="center" src="../images/banner_lightened_unsaturate.gif" width="612" height="92">
+      </td>
+    </tr>
+  </table>
+<!--webbot bot="Include" endspan i-checksum="34733" -->
+    </tr>
+    <tr>
+      <td valign="top" width="153" height="15"></td>
+      <td width="15"></td>
+      <td valign="top" width="612"></td>
+    </tr>
+    <tr>
+      <td valign="top" width="153">
+      <!--webbot bot="Include"
+        U-Include="../_private/navigation_include.htm" TAG="BODY" startspan -->
+
+<p align="left" style="line-height: 100%; margin-top: 0; margin-bottom: 6"><strong><font size="3"><a href="../index-2.html">Data Graphics</a></font></strong></p> 
+
+<!-- <p align="left" style="line-height: 100%; margin-top: 0; margin-bottom: 0"><a href="../theory.htm"><font size="2">Theory of Data Graphics</font></a></p> -->
+
+<p align="left" style="line-height: 100%; margin-top: 0; margin-bottom: 0"><a href="index.html"><font size="2">Design Patterns</font></a></p>
+<p align="left" style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">
+<a href="../color_scales.html">Example
+Color Schemes</a></font></p>
+<p align="left" style="line-height: 100%; margin-top: 0; margin-bottom: 0"><a href="../related_work.html"><font size="2">Related Work</font></a></p>
+<p align="left" style="line-height: 100%; margin-top: 0; margin-bottom: 0; text-indent:-6; margin-left:6">
+<font size="2"><a href="../EOS/index.html">EOS End of the Rainbow<br>
+Articles</a></font></p>
+<!-- <p align="left" style="line-height: 100%; margin-top: 0; margin-bottom: 0"><a href="../publications.htm"><font size="2">Publications</font></a></p> -->
+<!--webbot bot="Include" endspan i-checksum="16294" -->
+
+        &nbsp;</td>
+      <td width="15"></td>
+      <td valign="top" width="612">
+    <!--webbot bot="Include" U-Include="patterns.htm" TAG="BODY" startspan -->
+
+<div align="center">
+    <hr>
+
+    <h2 align="left">Design Patterns for Data Graphics</h2>
+    <p align="left">The design patterns concept was first made explicit by architect
+    Christopher Alexander&nbsp; in two books: <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0195019199/ref=pd_bxgy_text_1/102-9023877-9483345?v=glance&amp;s=books&amp;st=*">A
+    Pattern Language</a> and <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0195024028/qid=1086473256/sr=1-1/ref=sr_1_1/102-9023877-9483345?v=glance&amp;s=books">The
+    Timeless Way of Building</a>. <a href="http://www.amazon.com/exec/obidos/ASIN/0201633612/qid=1086473582/sr=2-2/ref=sr_2_2/102-9023877-9483345">Design
+    Patterns</a> by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides
+    introduced design patterns to the field of software engineering where they
+    have been much studied.</p>
+    <p align="left">The form of design patterns takes advantage of the natural tendency of
+    expert designers to think in problem-solution pairs. According to Alexander,
+    &quot;<span style="font-size: 12.0pt; font-family: Times New Roman; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">e</span><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA">ach pattern is a three-part rule, which expresses
+    a relation between a certain <i>context</i>, a <i>problem</i>, and a <i>solution</i>.&quot;</span></p>
+    <p align="left">Designing data graphics may be viewed as a task of user-interface design,
+    and the design patterns for data graphics presented here overlap with
+    pattern collections for user-interface design and data visualization. Among
+    these collections are Jenifer Tidwell's <a href="http://time-tripper.com/uipatterns/index.php?page=About_Patterns">UI
+    Patterns and Techniques</a>, Martijn van Welie's <a href="http://www.welie.com/patterns/">Web
+    Design patterns</a>, and recently published books on <a href="http://www.amazon.com/exec/obidos/ASIN/020172149X/qid=1032924077/sr=2-1/ref=sr_2_1/102-9023877-9483345">The
+    Design of Sites</a>, and <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0201788888/qid=1086475399/sr=1-1/ref=sr_1_1/102-9023877-9483345?v=glance&amp;s=books">A
+    Pattern Language for Web Usability</a>. 
+	<a href="http://www.cs.bham.ac.uk/research/hci/people/index.php?ID=19">Barry Wilkins</a> has written his
+    <a href="http://www.cs.bham.ac.uk/~bxw/thesis/MELD_PhD_Thesis.pdf">doctoral
+    dissertation</a> on <a href="http://www.cs.bham.ac.uk/~bxw/vispatts/">Visualization
+    Patterns</a>.</p>
+    <p align="left">This site presents five new design patterns:</p>
+    <ul>
+      <li>
+        <p align="left"><a href="#Diverging color scheme"><font size="4">Diverging color scheme</font></a></li>
+      <li>
+        <p align="left"><a href="#Sequential color scheme"><font size="4">Sequential color scheme</font></a></li>
+      <li>
+        <p align="left"><a href="#Resolution indicates data quality"><font size="4">Resolution indicates data
+        quality</font></a></li>
+      <li>
+        <p align="left"><a href="#Histogram-guided transformations"><font size="4">Histogram guided
+        transformations</font></a></li>
+      <li>
+        <p align="left"><a href="#Anomalies and residuals"><font size="4">Anomalies and residuals</font></a></li>
+    </ul>
+  <center>
+
+    <hr>
+    <p>&nbsp;
+</p>
+<table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Title</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p><b><a name="Diverging color scheme">Diverging color scheme</a></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Headline</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText"><i>Display diverging data using two complementary
+      color schemes that diverge from a common hue.</i><b><i><o:p>
+      </i>
+      </o:p>
+      </b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Illustration</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Context</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Many data distributions include a midpoint critical
+      value where both ends of the data distribution are of interest. The
+      midpoint critical value “…may be a mean, median, or zero value…”
+      and the reader “…is often interested in patterns in the data that show
+      clusters both above and below the critical value.” [<i>Brewer</i>, 1996,
+      p. 79] Examples of diverging data distributions include anomalies and
+      residuals.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Problem</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Solution</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Align perceptual orderings with logical orderings
+      by displaying diverging data using a diverging (double-ended) color
+      scheme. Craft color schemes using intensity to indicate magnitude and hue
+      to indicate sign. In cases where the magnitude is relevant but the sign is
+      not, consider using a more parsimonious grayscale intensity scheme. The
+      combination of various pairs of single-hue sequential schemes with common
+      endpoints produces many useful diverging schemes.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Forces</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Implementation</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Choosing an appropriate color scheme for diverging
+      data need not be a difficult or complicated process. For some variables
+      convention suggests the color scheme. Air temperature, for example, is
+      often displayed using a diverging scale of red and blue with zero on the
+      Celsius scale marking the transition. Cartographers have traditionally
+      displayed surface elevation using a scheme of browns or greens and ocean
+      depth using progressively darker blues. Brewer [1996] suggests the
+      following hue combinations for diverging schemes: red/blue, orange/blue,
+      orange/purple, yellow/purple, brown/blue, and yellow/blue.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Examples</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Related Patterns</p>
+    </td>
+    <td width="593" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Consider using histogram to balance the data
+      distribution with the color scheme (and also for display)</p>
+      <p class="MsoBodyText">For data without a mid-point critical value, see
+      sequential color scheme.</p>
+    </td>
+  </tr>
+</table>
+    <h1>&nbsp;<o:p> </o:p>
+</h1>
+<table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Title</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p><b><a name="Sequential color scheme">Sequential color scheme</a></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Headline</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText"><i>Display data that do not contain midpoint
+      critical values using sequential color schemes</i><b><o:p>
+      </o:p>
+      </b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Illustration</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Context</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Many data distributions include a range of values
+      without a significant midpoint. Absolute critical values may bound such
+      distributions, as in the case of percentages, or the range of sampled data
+      may arbitrarily define the endpoints, but there is no significant central
+      value within the range of the data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Problem</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Spectral color schemes work poorly for sequential
+      data, because spectral order produces no natural magnitude message in the
+      viewer’s mind.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Solution</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Display sequential data using a sequence of
+      lightness steps combined with a single hue (e.g., Figure 1a) or with a hue
+      transition.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Forces</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Implementation</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Beware that a hue transition may exhibit some of the
+      characteristics of a diverging color scale. In particular, when yellow is
+      employed as the hue, saturated yellow will tend to stand out from
+      transitional hues that are darker.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Examples</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Related Patterns</p>
+    </td>
+    <td width="588" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+</table>
+<p class="MsoBodyText">&nbsp;</p>
+<table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Title</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p><b><a name="Resolution indicates data quality">Resolution indicates data quality</a></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Headline</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText"><i>Displays with higher resolution than the underlying
+      data can mislead the viewer</i><b><i><o:p>
+      </i>
+      </o:p>
+      </b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Illustration</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center"><a href="res_indicates_quality.gif" target="_blank">
+      <img border="0" src="res_indicates_quality_small.gif" width="460" height="169"></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Context</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Array-oriented data typically represent phenomena
+      measured, modeled, or recorded at a specific resolution, and often
+      displayed as pixels or cells in a regular grid.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Problem</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Interpolation and contouring algorithms smooth data
+      by definition, but scale of measurement is an important characteristic of
+      data and should not be obscured. High-resolution presentation of the data,
+      or the use of high-resolution reference overlays, such as continental
+      outlines or political boundaries, can obscure important limitations of the
+      data or hide the nature of the underlying model. As an example, the viewer
+      may make spurious inferences about climate change in the Rocky Mountains
+      based on juxtaposition of a detailed United States map with the output
+      from a climate model, which represents the Rocky Mountains only crudely.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Solution</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Indicate the resolution of the underlying data by
+      showing grid-cells and reference maps at their measured or recorded
+      resolution. If effective resolution varies over the map, vary the display
+      accordingly. Consider the array-oriented data as representing an array of
+      pixels and display those pixels as faithfully as possible, without
+      smoothing. If the array is insufficiently dense to provide a good visual
+      representation without smoothing pixels, consider an alternate
+      cartographic representation such as point symbols. The display should
+      clearly show null or missing values using black, white, or an appropriate
+      neutral color.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Forces</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Implementation</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Examples</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Related Patterns</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+</table>
+<h3>&nbsp;<o:p>
+</o:p>
+</h3>
+<table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Title</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p><b><a name="Histogram-guided transformations">Histogram-guided transformations</a></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Headline</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText"><i>Viewing the data graphic on its own is often
+      insufficient to understand the interaction of a color scheme with the data
+      distribution.</i><b><i><o:p>
+      </i>
+      </o:p>
+      </b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Illustration</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Context</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Perceptually a color scheme is a selective
+      transformation of the data.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Problem</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Viewing the map alone is often insufficient for
+      assessing the goodness of fit between the color scheme and the data, and
+      for determining whether apparent patterns in the data are true and valid
+      or merely display artifacts. Iteratively or interactively altering
+      properties of the color scheme may also reveal patterns in the underlying
+      data or model.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Solution</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Use a histogram in combination with map display to
+      evaluate color schemes. Viewing the two in combination may suggest
+      appropriate mathematical transformations of the data for display.</p>
+      <p class="MsoBodyText">combining the histogram with the data is also truth
+      in advertising. Consider displaying the histogram along with the data if
+      color is used selectively to accentuate certain values, features, or
+      patterns.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Forces</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Implementation</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">The histogram tool employed should be able to
+      “ignore” missing values. “Standardized” data does not necessarily
+      yield a normal distribution over any given map area.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Examples</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Related Patterns</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+</table>
+<b><span style="font-size:16.0pt;font-family:Arial;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:16.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA"><br clear="all" style="mso-special-character:line-break;
+page-break-before:always">
+</span></b>&nbsp;<o:p>
+</o:p>
+<table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Title</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p><b><a name="Anomalies and residuals">Anomalies and residuals</a></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Headline</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText"><i>Recognizing patterns from a single image of
+      differences is often easier than comparing two images visually.</i><b></o:p>
+      </b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Illustration</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal" align="center"><a href="small_multiples.gif" target="_blank">
+      <img border="0" src="small_multiples_small.gif" width="460" height="365"></a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Context</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Exploring and highlighting patterns is a primary
+      purpose of scientific data graphics. Measured in absolute terms, the
+      variations that produce patterns are often small, but relative magnitude
+      may be significant.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Problem</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Depending on the data distribution, calculated
+      differences between two data sets or variables (i.e., anomalies or
+      residuals) may prove more useful than the two data sets themselves. Three
+      commonly calculated differences are:</p>
+      <p class="MsoBodyText" style="margin-left:.5in;text-indent:-.25in;mso-list:
+  l2 level1 lfo10;tab-stops:list .5in">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>Differences between two extremes, such as between July and January
+      temperature.</p>
+      <p class="MsoBodyText" style="margin-left:.5in;text-indent:-.25in;mso-list:
+  l2 level1 lfo10;tab-stops:list .5in">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>Differences between the data and some measure of central tendency,
+      such as a mean or median value.</p>
+      <p class="MsoBodyText" style="margin-left:.5in;text-indent:-.25in;mso-list:
+  l2 level1 lfo10;tab-stops:list .5in">3.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>Differences between measured data and data simulated by a model.</p>
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Solution</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">Mapping differences, in addition to or instead of
+      absolute quantities often helps the viewer to recognize patterns, and
+      allows the mapmaker to communicate more information in a smaller space.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Forces</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Implementation</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Examples</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="127" valign="top" style="width:95.4pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoNormal">Related Patterns</p>
+    </td>
+    <td width="463" valign="top" style="width:347.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt">
+      <p class="MsoBodyText">&nbsp;<o:p>
+      </o:p>
+      </p>
+    </td>
+  </tr>
+</table>
+    <p class="MsoBodyText">&nbsp;</p>
+    <hr>
+
+  </center>
+<p align="left"><font size="4"><b>Works Cited</b></font></p>
+<p class="MsoBodyText" style="margin-left:.5in;text-indent:-.5in" align="left"><!--[if supportFields]><span
+style='mso-element:field-begin'></span><span style="mso-spacerun:
+yes"> </span>ADDIN ENBbu <span style='mso-element:field-separator'></span><![endif]-->
+ Brewer, C.A., 1996. Guidelines for selecting colors for diverging schemes on
+maps. The Cartographic Journal, 33(2): 79-86.</p>
+<p class="MsoBodyText" style="margin-left:.5in;text-indent:-.5in" align="left">Brewer, C.A.,
+1997. Spectral schemes: controversial color use on maps. Cartography and
+Geographic Information Systems, 24(4): 203-220.</p>
+<p class="MsoBodyText" style="margin-left:.5in;text-indent:-.5in" align="left">Tufte, E.R.,
+1983. The Visual Display of Quantitative Information. Graphics Press, Cheshire,
+Connecticut, 197 pp.</p>
+<p class="MsoBodyText" style="margin-left:.5in;text-indent:-.5in" align="left">Tufte, E.R.,
+1990. Envisioning Information. Graphics Press, Cheshire, Connecticut, 126 pp.</p>
+<p class="MsoBodyText" style="margin-left:.5in;text-indent:-.5in" align="left">Tufte, E.R.,
+1997. Visual Explanations. Graphics Press, Cheshire, CT, 156 pp.<!--[if gte mso 9]><xml>
+ <w:data>460039004400330030003200440042003000300034003200410033003600380035003600310030003000300030003800330032004300460036003500360045003600320036003200300030003300450035004500410042004200330030003100460032003200390035004200300032003000300030003000300032003100430031004300420035003300410035003100300030003000300030003000</w:data>
+</xml><![endif]-->
+&nbsp;
+</p>
+
+  <center>
+
+    <hr>
+
+  </center>
+</div>
+
+<!--webbot bot="Include" endspan i-checksum="15539" -->
+    <h2 style="mso-margin-bottom-alt: auto">&nbsp;</h2>
+        <p align="left"><font size="2">Department of Geography, University of Oregon<br>
+    last modified
+    <!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%m/%d/%Y %I:%M %p" startspan -->02/12/2007 10:42 PM<!--webbot bot="Timestamp" endspan i-checksum="25906" --></font>
+        </p>
+      </td>
+    </tr>
+    </table>
+  </center>
+</div>
+
+</body>
+
+
+<!-- Mirrored from geog.uoregon.edu/datagraphics/patterns/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2018 06:05:19 GMT -->
+</html>
